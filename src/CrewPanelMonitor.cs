@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
+using KSP.UI;
 
 namespace BetterCrewAssignment
 {
@@ -25,6 +26,12 @@ namespace BetterCrewAssignment
         private DateTime lastUpdate;
         private List<ProtoCrewMember> lastAssignedCrew;
 
+        public void Awake()
+        {
+            GameEvents.onEditorScreenChange.Add(OnEditorScreenChange);
+            GameEvents.onGameSceneSwitchRequested.Add(OnGameSceneSwitch);
+        }
+
         /// <summary>
         /// Start the monitor.
         /// </summary>
@@ -33,8 +40,12 @@ namespace BetterCrewAssignment
             currentScreen = EditorScreen.Parts;
             lastUpdate = DateTime.Now;
             lastAssignedCrew = GetCurrentlyAssignedCrew();
-            GameEvents.onEditorScreenChange.Add(OnEditorScreenChange);
-            GameEvents.onGameSceneSwitchRequested.Add(OnGameSceneSwitch);
+        }
+
+        public void OnDestroy()
+        {
+            GameEvents.onEditorScreenChange.Remove(OnEditorScreenChange);
+            GameEvents.onGameSceneSwitchRequested.Remove(OnGameSceneSwitch);
         }
 
         /// <summary>
@@ -256,7 +267,7 @@ namespace BetterCrewAssignment
                 // the CMAssignmentDialog class to me when I asked about it in the mod development
                 // forum. I never in a thousand years would have found this cryptically-named
                 // class on my own.
-                return (CMAssignmentDialog.Instance == null) ? null : CMAssignmentDialog.Instance.GetManifest();
+                return (CrewAssignmentDialog.Instance == null) ? null : CrewAssignmentDialog.Instance.GetManifest();
             }
         }
 
