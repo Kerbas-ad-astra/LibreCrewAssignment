@@ -2,7 +2,7 @@
 using System.Text;
 using UnityEngine;
 
-namespace BetterCrewAssignment
+namespace LibreCrewAssignment
 {
     /// <summary>
     /// Simple wrapper around debug logging so that we have a consistent output.

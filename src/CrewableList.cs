@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace BetterCrewAssignment
+namespace LibreCrewAssignment
 {
     /// <summary>
     /// Represents the set of all crewable components on a ship.

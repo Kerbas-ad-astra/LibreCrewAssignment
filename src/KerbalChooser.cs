@@ -1,4 +1,4 @@
-﻿namespace BetterCrewAssignment
+﻿namespace LibreCrewAssignment
 {
     interface KerbalChooser
     {

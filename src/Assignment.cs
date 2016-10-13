@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text;
 
-namespace BetterCrewAssignment
+namespace LibreCrewAssignment
 {
     /// <summary>
     /// Represents the semantics for deciding how to assign a kerbal to a slot in a crewable part.
@@ -43,7 +43,7 @@ namespace BetterCrewAssignment
             {
                 slots[index] = null;
             }
-            ModuleCrewAssignment module = ModuleCrewAssignment.Find(part);
+            ModuleLibCrewAssignment module = ModuleLibCrewAssignment.Find(part);
             if (module != null)
             {
                 Assignment defaultAssignment = Assignment.Parse(module.defaultAssignment);

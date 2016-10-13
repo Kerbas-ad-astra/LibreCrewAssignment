@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace BetterCrewAssignment
+namespace LibreCrewAssignment
 {
     /// <summary>
     /// Represents the assignment of crew for a particular slot on a particular crewable part.

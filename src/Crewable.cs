@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace BetterCrewAssignment
+namespace LibreCrewAssignment
 {
     /// <summary>
     /// Represents a crewable component of a ship.
@@ -112,7 +112,7 @@ namespace BetterCrewAssignment
         /// </summary>
         public void PersistAssignments()
         {
-            ModuleCrewAssignment module = ModuleCrewAssignment.Find(part);
+            ModuleLibCrewAssignment module = ModuleLibCrewAssignment.Find(part);
             if (module == null) return;
             List<Assignment> assignments = new List<Assignment>(part.CrewCapacity);
             foreach (CrewSlot slot in Slots)

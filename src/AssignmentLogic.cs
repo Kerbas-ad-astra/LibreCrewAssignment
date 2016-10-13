@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace BetterCrewAssignment
+namespace LibreCrewAssignment
 {
     /// <summary>
     /// Encodes the overall semantics of assigning crew to slots.
@@ -203,7 +203,7 @@ namespace BetterCrewAssignment
         private static void FulfillPartRequirements(CrewableList crewables, ShipConstruct construct)
         {
             // Find any professions that are required on the ship
-            Dictionary<string, ModuleCrewRequirement> requirements = FindRequiredProfessions(construct);
+            Dictionary<string, ModuleLibCrewRequirement> requirements = FindRequiredProfessions(construct);
             if (requirements.Count == 0) return; // there aren't any requirements
 
             // We can ignore any that are already provided for
@@ -251,7 +251,7 @@ namespace BetterCrewAssignment
             // an empty slot (and available unassigned crew member) to satisfy each one.
             foreach (string requiredProfession in prioritizedRequirements)
             {
-                ModuleCrewRequirement requirement = requirements[requiredProfession];
+                ModuleLibCrewRequirement requirement = requirements[requiredProfession];
                 string part = Logging.ToString(requirement.part);
                 ProtoCrewMember highest;
                 ProtoCrewMember lowest;
@@ -421,18 +421,18 @@ namespace BetterCrewAssignment
         /// </summary>
         /// <param name="construct"></param>
         /// <returns></returns>
-        private static Dictionary<string, ModuleCrewRequirement> FindRequiredProfessions(ShipConstruct construct)
+        private static Dictionary<string, ModuleLibCrewRequirement> FindRequiredProfessions(ShipConstruct construct)
         {
-            Dictionary<string, ModuleCrewRequirement> requirements = new Dictionary<string, ModuleCrewRequirement>();
+            Dictionary<string, ModuleLibCrewRequirement> requirements = new Dictionary<string, ModuleLibCrewRequirement>();
             foreach (Part part in construct.parts)
             {
-                foreach (ModuleCrewRequirement requirement in part.Modules.GetModules<ModuleCrewRequirement>())
+                foreach (ModuleLibCrewRequirement requirement in part.Modules.GetModules<ModuleLibCrewRequirement>())
                 {
                     string profession = requirement.profession;
                     if ((profession == null) || (profession.Length == 0)) continue;
                     if (requirements.ContainsKey(profession))
                     {
-                        ModuleCrewRequirement previousRequirement = requirements[profession];
+                        ModuleLibCrewRequirement previousRequirement = requirements[profession];
                         if (requirement.importance > previousRequirement.importance)
                         {
                             requirements[profession] = requirement; // it's more important, replace it

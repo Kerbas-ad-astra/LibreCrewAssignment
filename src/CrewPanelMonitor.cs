@@ -4,7 +4,7 @@ using System.Text;
 using UnityEngine;
 using KSP.UI;
 
-namespace BetterCrewAssignment
+namespace LibreCrewAssignment
 {
     /// <summary>
     /// Provides events related to the crew panel in the editor.

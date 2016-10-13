@@ -1,14 +1,11 @@
-#BetterCrewAssignment
-KSP mod to help with crew assignments in the VAB/SPH.
+#LibreCrewAssignment
+* A KSP mod to help with crew assignments in the VAB/SPH.  Based on the last MIT-licensed version of BetterCrewAssignment by Snark.*
+
+## Features
 
  * It makes better automatic default choices for crew assignments (e.g. "labs need scientists" or "drills need engineers").
  * It remembers your assignments, so that the next time you launch that ship, it will try to do the same thing.  (No more discovering, *after* you're in orbit, that your gosh-darn rescue ship filled up all the slots and you've got nowhere to put the stranded kerbal!)
  * You can customize the default behavior with ModuleManager config.
-
-
-##How to install
-Unzip into your GameData folder, same as any mod.
-
 
 ##How to use
 Just play KSP!  The mod is deliberately minimalistic.  It adds no UI, it doesn't require any special actions to use.  It just silently makes the crew-assignment experience better.

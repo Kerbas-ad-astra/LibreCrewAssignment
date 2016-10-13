@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace BetterCrewAssignment
+namespace LibreCrewAssignment
 {
     /// <summary>
     /// This is the main class that drives the mod.
@@ -192,7 +192,7 @@ namespace BetterCrewAssignment
                     }
                     Logging.Log(message);
                 } // for each crew slot on the part
-                foreach (ModuleCrewRequirement requirement in ModuleCrewRequirement.CrewRequirementsOf(part))
+                foreach (ModuleLibCrewRequirement requirement in ModuleLibCrewRequirement.CrewRequirementsOf(part))
                 {
                     Logging.Log(Logging.ToString(part) + ": require " + requirement);
                 }

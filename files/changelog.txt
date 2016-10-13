@@ -1,4 +1,9 @@
-Version 1.2.2  (CURRENT VERSION)
+Version...none in particular at this time
+* Forked from last MIT-licensed version of BetterCrewAssignment
+	* Renamed to LibreCrewAssignment
+* Compiled against KSP 1.2
+
+Version 1.2.2
 * Fix a bug in which events are registered multiple times (causes log spam)
 * Update to ModuleManager version 2.6.25.
 

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace BetterCrewAssignment
+namespace LibreCrewAssignment
 {
     [KSPAddon(KSPAddon.Startup.Instantly, false)]
     class SplashScreen : MonoBehaviour

@@ -1,4 +1,4 @@
-﻿namespace BetterCrewAssignment
+﻿namespace LibreCrewAssignment
 {
     /// <summary>
     /// Indicates the type of assignment for a slot.
