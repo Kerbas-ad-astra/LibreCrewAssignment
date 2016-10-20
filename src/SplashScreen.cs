@@ -8,7 +8,8 @@ namespace LibreCrewAssignment
     {
         private static readonly string[] NEW_TIPS =
         {
-            "Determining Better Crew Assignments..."
+            "Determining Better Crew Assignments...",
+			"Protecting User Freedoms..."
         };
 
         internal void Awake()

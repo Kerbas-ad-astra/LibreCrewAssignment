@@ -112,7 +112,7 @@ namespace LibreCrewAssignment
         /// </summary>
         public void PersistAssignments()
         {
-            ModuleLibCrewAssignment module = ModuleLibCrewAssignment.Find(part);
+            ModuleCrewAssignment module = ModuleCrewAssignment.Find(part);
             if (module == null) return;
             List<Assignment> assignments = new List<Assignment>(part.CrewCapacity);
             foreach (CrewSlot slot in Slots)

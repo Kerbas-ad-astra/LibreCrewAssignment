@@ -192,7 +192,7 @@ namespace LibreCrewAssignment
                     }
                     Logging.Log(message);
                 } // for each crew slot on the part
-                foreach (ModuleLibCrewRequirement requirement in ModuleLibCrewRequirement.CrewRequirementsOf(part))
+                foreach (ModuleCrewRequirement requirement in ModuleCrewRequirement.CrewRequirementsOf(part))
                 {
                     Logging.Log(Logging.ToString(part) + ": require " + requirement);
                 }

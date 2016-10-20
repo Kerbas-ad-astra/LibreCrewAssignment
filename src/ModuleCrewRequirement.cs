@@ -8,7 +8,7 @@ namespace LibreCrewAssignment
     /// Placing this module on a part causes it to request that the vehicle it's on be crewed
     /// rather than uncrewed.
     /// </summary>
-    public class ModuleLibCrewRequirement : PartModule
+    public class ModuleCrewRequirement : PartModule
     {
         /// <summary>
         /// Indicates the profession that the part is requesting there be at least 1 of
@@ -40,9 +40,9 @@ namespace LibreCrewAssignment
         /// </summary>
         /// <param name="part"></param>
         /// <returns></returns>
-        public static List<ModuleLibCrewRequirement> CrewRequirementsOf(Part part)
+        public static List<ModuleCrewRequirement> CrewRequirementsOf(Part part)
         {
-            return part.Modules.GetModules<ModuleLibCrewRequirement>();
+            return part.Modules.GetModules<ModuleCrewRequirement>();
         }
 
         public override string ToString()

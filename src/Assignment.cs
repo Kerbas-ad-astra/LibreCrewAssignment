@@ -43,7 +43,7 @@ namespace LibreCrewAssignment
             {
                 slots[index] = null;
             }
-            ModuleLibCrewAssignment module = ModuleLibCrewAssignment.Find(part);
+            ModuleCrewAssignment module = ModuleCrewAssignment.Find(part);
             if (module != null)
             {
                 Assignment defaultAssignment = Assignment.Parse(module.defaultAssignment);

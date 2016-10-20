@@ -51,8 +51,8 @@
     <Compile Include="EditorBehaviour.cs" />
     <Compile Include="KerbalChooser.cs" />
     <Compile Include="Logging.cs" />
-    <Compile Include="ModuleLibCrewAssignment.cs" />
-    <Compile Include="ModuleLibCrewRequirement.cs" />
+    <Compile Include="ModuleCrewAssignment.cs" />
+    <Compile Include="ModuleCrewRequirement.cs" />
     <Compile Include="CrewableList.cs" />
     <Compile Include="SplashScreen.cs" />
   </ItemGroup>

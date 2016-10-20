@@ -30,7 +30,7 @@ namespace LibreCrewAssignment
     /// "Scientist|Engineer|Empty" means "assign a scientist if available, otherwise
     /// assign an engineer if available, otherwise leave the slot empty".
     /// </summary>
-    public class ModuleLibCrewAssignment : PartModule
+    public class ModuleCrewAssignment : PartModule
     {
         /// <summary>
         /// The default assignment for all slots in the command pod.
@@ -49,9 +49,9 @@ namespace LibreCrewAssignment
         /// </summary>
         /// <param name="part"></param>
         /// <returns></returns>
-        public static ModuleLibCrewAssignment Find(Part part)
+        public static ModuleCrewAssignment Find(Part part)
         {
-            List<ModuleLibCrewAssignment> modules = part.Modules.GetModules<ModuleLibCrewAssignment>();
+            List<ModuleCrewAssignment> modules = part.Modules.GetModules<ModuleCrewAssignment>();
             return (modules.Count == 0) ? null : modules[0];
         }
     }
